@@ -7,19 +7,21 @@ import lombok.Data;
 @Data // constructor,getter and setter nai banana pad ta
 //@AllArgsConstructor
 public class StudentDto {
-    private int id;
+    private Long id;
     private String name;
+    private String gmail;
 
-    public StudentDto(int id, String name) {
+
+    public StudentDto(Long id, String name, String gmail) {
         this.id = id;
         this.name = name;
+        this.gmail = gmail;
     }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -29,5 +31,13 @@ public class StudentDto {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGmail() {
+        return gmail;
+    }
+
+    public void setGmail(String gmail) {
+        this.gmail = gmail;
     }
 }

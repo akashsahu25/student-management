@@ -1,6 +1,7 @@
 package com.akassahu.studentManagement.service.impl;
 
 import com.akassahu.studentManagement.dto.StudentDto;
+import com.akassahu.studentManagement.entity.Student;
 import com.akassahu.studentManagement.repository.StudentRepository;
 import com.akassahu.studentManagement.service.StudentService;
 
@@ -16,7 +17,8 @@ public class StudentServiceimpl implements StudentService {
 
     @Override
     public List<StudentDto> getAllstudents() {
-        return List.of();
+        List<Student> students = studentRepository.findAll();
+        return students.stream().map(student -> new StudentDto(student.getId() , student.getName() , student.getEmail())).toList();
     }
 }
 
