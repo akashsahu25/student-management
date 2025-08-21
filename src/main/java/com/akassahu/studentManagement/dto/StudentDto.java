@@ -5,7 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data // constructor,getter and setter nai banana pad ta
-@AllArgsConstructor
+//@AllArgsConstructor
 public class StudentDto {
     private int id;
     private String name;
