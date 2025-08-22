@@ -3,14 +3,18 @@ package com.akassahu.studentManagement.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-@Data // constructor,getter and setter nai banana pad ta
+//@Data // constructor,getter and setter nai banana pad ta
 //@AllArgsConstructor
+//@NoArgsConstructor
 public class StudentDto {
     private Long id;
     private String name;
     private String gmail;
 
+    public StudentDto() {
+    }
 
     public StudentDto(Long id, String name, String gmail) {
         this.id = id;
